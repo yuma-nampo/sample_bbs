@@ -23,7 +23,8 @@
                         <!-- {{ $post -> title }}を取得して表示 -->
                         <h5 class="card-title">名前:{{ $post -> title }}</h5>
                         <p class="card-text">内容：{{ $post -> body }}</p>
-                        <img src="{{ $post->image_path }}" alt="">
+                        <img src="{{ asset('storage/image/' .$post->image_path) }}" alt="">
+                        <!-- <img src="{{ $post->image_path }}" alt=""> -->
                     </div>
                     <div class="card-footer text-muted">
                         投稿日：{{ $post -> created_at }}
